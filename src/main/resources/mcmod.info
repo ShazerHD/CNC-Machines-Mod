@@ -1,0 +1,16 @@
+[
+{
+  "modid": "cnc",
+  "name": "CNC Machines",
+  "description": "Adds in working CNC machines.",
+  "version": "1.0-PRE-ALPHA",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Shazer"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
