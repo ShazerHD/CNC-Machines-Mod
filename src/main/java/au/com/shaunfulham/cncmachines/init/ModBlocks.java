@@ -11,6 +11,6 @@ public class ModBlocks
 {
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 	
-	public static final Block LASER_MACHINE_BLOCK = new BlockBase("laser_machine", Material.IRON);
+	public static final Block LASER_MACHINE_BLOCK = new BlockBase("laser_machine_block", Material.IRON);
 	
 }
