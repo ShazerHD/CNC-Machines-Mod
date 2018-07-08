@@ -1,6 +1,13 @@
 {
-    "variants": {
-    
-        "normal": { "model": "cnc:laser_machine_block" }
+    "variants": 
+    {
+        "cutting=false,facing=north": { "model": "cnc:laser_machine_block" },
+        "cutting=false,facing=east": { "model": "cnc:laser_machine_block", "y": 90 },
+        "cutting=false,facing=south": { "model": "cnc:laser_machine_block", "y": 180 },
+        "cutting=false,facing=west": { "model": "cnc:laser_machine_block", "y": 270 },
+        "cutting=true,facing=north": { "model": "cnc:cutting_laser_machine_block" },
+        "cutting=true,facing=east": { "model": "cnc:cutting_laser_machine_block", "y": 90 },
+        "cutting=true,facing=south": { "model": "cnc:cutting_laser_machine_block", "y": 180 },
+        "cutting=true,facing=west": { "model": "cnc:cutting_laser_machine_block", "y":270  }
     }
 }
