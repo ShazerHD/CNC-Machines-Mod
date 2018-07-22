@@ -1,5 +1,6 @@
 package au.com.shaunfulham.cncmachines;
 
+import au.com.shaunfulham.cncmachines.init.RegistrationHandler;
 import au.com.shaunfulham.cncmachines.proxy.CommonProxy;
 import au.com.shaunfulham.cncmachines.util.Reference;
 import net.minecraftforge.fml.common.Mod;
@@ -20,20 +21,20 @@ public class Main
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
-	@EventHandler
-	public static void PreInit(FMLPreInitializationEvent preInit) 
+	@Mod.EventHandler
+	public static void preInit(FMLPreInitializationEvent preInit)
 	{
-		
+		RegistrationHandler.init();
 	}
 	
-	@EventHandler
+	@Mod.EventHandler
 	public static void init(FMLInitializationEvent init) 
 	{
 		
 	}
 	
-	@EventHandler
-	public static void PostInit(FMLPostInitializationEvent postInit) 
+	@Mod.EventHandler
+	public static void postInit(FMLPostInitializationEvent postInit)
 	{
 		
 	}

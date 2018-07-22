@@ -1,17 +1,32 @@
 package au.com.shaunfulham.cncmachines.init;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import au.com.shaunfulham.cncmachines.blocks.BlockBase;
 import au.com.shaunfulham.cncmachines.blocks.LaserMachineBlock;
+import au.com.shaunfulham.cncmachines.items.LaserMachine;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemBlock;
 
 public class ModBlocks 
 {
-	public static final List<Block> BLOCKS = new ArrayList<Block>();
 	
-	public static final Block LASER_MACHINE_BLOCK = new LaserMachineBlock("laser_machine_block");
-	
+	public static final Block LASER_MACHINE_BLOCK;
+
+	static
+	{
+		LASER_MACHINE_BLOCK  = new LaserMachineBlock("laser_machine_block");
+	}
+
+	public static void register()
+	{
+		registerBlock(LASER_MACHINE_BLOCK, new LaserMachine(LASER_MACHINE_BLOCK));
+	}
+
+	public static void registerBlock(Block block, ItemBlock item)
+	{
+		if (block.getRegistryName() == null)
+			throw new IllegalArgumentException("A block being registered does not have a registry name and could be successfully registered.");
+		RegistrationHandler.Blocks.add(block);
+		item.setRegistryName(block.getRegistryName());
+		RegistrationHandler.Items.add(item);
+	}
+
 }
