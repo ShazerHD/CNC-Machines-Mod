@@ -1,10 +1,10 @@
 {
-	"credit": "Made with Blockbench",
+	"parent": "block/cube",	
 	"textures": {
-		"0": "cnc:blocks/laser_machine_block_line1",
+		"0": "minecraft:blocks/concrete_gray",
 		"1": "cnc:blocks/laser_machine_block_laser",
-		"3": "cnc:blocks/laser_machine_metal",
-		"particle": "cnc:blocks/laser_machine_block_line1"
+		"3": "minecraft:blocks/concrete_silver",
+		"particle": "minecraft:blocks/concrete_gray"
 	},
 	"elements": [
 		{

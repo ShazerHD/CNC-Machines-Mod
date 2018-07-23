@@ -1,17 +1,27 @@
 package au.com.shaunfulham.cncmachines.proxy;
 
-import au.com.shaunfulham.cncmachines.Main;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
 
 public class ClientProxy extends CommonProxy 
 {
-	
-	
-	public void registerItemRenderer(Item item, int meta, String id) 
+
+
+	public void preInit(FMLPreInitializationEvent event)
 	{
-		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), id));
+		super.preInit(event);
+	}
+
+	public void init(FMLInitializationEvent event)
+	{
+		super.init(event);
+	}
+
+
+	public void postInit(FMLPostInitializationEvent event)
+	{
+		super.postInit(event);
 	}
 }
